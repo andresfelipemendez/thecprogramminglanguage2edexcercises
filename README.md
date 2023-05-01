@@ -22,9 +22,20 @@ gcc -o exerciseX_Y exerciseX_Y.c
 ./exerciseX_Y
 ```
 
-when using text file as input for the program use the following commands:
+I also use make as a shorthand
+```bash
+make exerciseX_Y
+./exerciseX_Y
+```
+
+When using text file as input for the program use the following command on windows powershell:
 ```powershell
 Get-Content exerciseX_Y.c | exerciseX_Y.exe
+```
+
+or this comand on UNIX systems:
+```bash
+./exerciseX_Y < exerciseX_Y.c
 ```
 
 Replace `X` and `Y` with the respective chapter and exercise numbers.
