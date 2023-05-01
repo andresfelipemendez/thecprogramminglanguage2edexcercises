@@ -27,10 +27,11 @@ int main() {
 		charLengthBytes, charLengthBits, range, AMOUNT_CHARACTERS);
 
 	int c;
-	while((c=getchar())!=EOF)
+	while(( c = getchar()) != EOF)
 	{
 		++charactersHistogram[c];
 	}
+	
 	for (int i = 0; i < AMOUNT_CHARACTERS; ++i)
 	{
 		if(charactersHistogram[i]>0)
