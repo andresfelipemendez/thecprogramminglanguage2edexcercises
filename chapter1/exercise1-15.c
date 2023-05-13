@@ -23,7 +23,6 @@ int main() {
 	}
 }
 
-
 int FahrenheitToCelsius(int temperature) {
 	return 5 * (temperature - 32) / 9;
 }

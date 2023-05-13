@@ -5,8 +5,8 @@ It is easy to draw the histogram with the bars horizontal; a vertical
 orientation is more challenging
 
 according to wikipedia the largest word length its 45 letters
-https://en.wikipedia.org/wiki/Longest_word_in_English#:~:text=The%20longest%20word%20in%20any,is%20the%20same%20as%20silicosis.
-pneumonoultramicroscopicsilicovolcanoconiosis	45	The disease silicosis	Longest word in a major dictionary[6]
+https://en.wikipedia.org/wiki/Longest_word_in_English
+pneumonoultramicroscopicsilicovolcanoconiosis 45 letters The disease silicosis
 */
 
 #include <stdio.h>
