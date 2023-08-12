@@ -5,10 +5,11 @@ void detab(char* input, char* output, size_t length, int tabWidth) {
 	int outputIndex = 0;
 	for (size_t i = 0; i < length; ++i) {
 		if(input[i] == '\t') {
-			output[outputIndex++] = ' ';
-			output[outputIndex++] = ' ';
-			output[outputIndex++] = ' ';
-			output[outputIndex++] = ' ';
+			int remainingSpaces = tabWidth - (i % tabWidth);
+			printf("remainingSpaces: %i\n", remainingSpaces);
+			while(remainingSpaces-- > 0) {
+				output[outputIndex++] = ' ';
+			}
 		} else {
 			output[outputIndex++] = input[i];
 		}
@@ -21,6 +22,20 @@ UTEST(foo, bar) {
 	char output[128];
 	detab(testInput, output, strlen(testInput), 4);
 	ASSERT_TRUE(strcmp(output, "    abc") == 0);
+}
+
+UTEST(foo, bar1) {             
+	char testInput[] = "a	bc";
+	char output[128];
+	detab(testInput, output, strlen(testInput), 4);
+	ASSERT_TRUE(strcmp(output, "a   bc") == 0);
+}
+
+UTEST(foo, bar2) {             
+	char testInput[] = "ab	c";
+	char output[128];
+	detab(testInput, output, strlen(testInput), 4);
+	ASSERT_TRUE(strcmp(output, "ab  c") == 0);
 }
 
 UTEST_STATE();
